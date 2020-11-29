@@ -2,9 +2,7 @@
 
 namespace PierreMiniggio\DatabaseConnection\Exception;
 
-use PierreMiniggio\DatabaseConnection\DatabaseConnection;
-
-class QueryException extends DatabaseConnection
+class QueryException extends DatabaseException
 {
     
 }
