@@ -1,0 +1,22 @@
+{
+    "name": "pierreminiggio/database-connection",
+    "description": "Interact with a SQL Database",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Pierre MINIGGIO",
+            "email": "pierre@miniggiodev.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PierreMiniggio\\DatabaseConnection\\": "src/"
+        }
+    },
+    "require-dev": {},
+    "scripts": {}
+}
