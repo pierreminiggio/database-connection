@@ -2,9 +2,9 @@
 
 namespace PierreMiniggio\DatabaseConnection\Exception;
 
-use Exception;
+use RuntimeException;
 
-class DatabaseException extends Exception
+class DatabaseException extends RuntimeException
 {
 
 }
