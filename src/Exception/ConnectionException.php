@@ -4,6 +4,7 @@ namespace PierreMiniggio\DatabaseConnection\Exception;
 
 use PierreMiniggio\DatabaseConnection\DatabaseConnection;
 
-class ConnectionException extends DatabaseConnection {
+class ConnectionException extends DatabaseConnection
+{
     
 }
