@@ -37,9 +37,8 @@ class DatabaseConnection
             );
         } catch (PDOException $e) {
             throw new ConnectionException(
-                'An error occured while trying to connect to database : ' . $e->getMessage(),
-                0,
-                $e
+                message: 'An error occured while trying to connect to database : ' . $e->getMessage(),
+                previous: $e,
             );
         } 
     }
@@ -60,9 +59,8 @@ class DatabaseConnection
             $statement->execute($parameters);
         } catch (PDOException $e) {
             throw new QueryException(
-                'An error occured while querying from the database : ' . $e->getMessage(),
-                0,
-                $e
+                message: 'An error occured while querying from the database : ' . $e->getMessage(),
+                previous: $e,
             );
         }
 
@@ -78,9 +76,8 @@ class DatabaseConnection
             $statement = $this->connection->prepare($query);
         } catch (PDOException $e) {
             throw new ExecuteException(
-                'An error occured while executing the query : ' . $e->getMessage(),
-                0,
-                $e
+                message: 'An error occured while executing the query : ' . $e->getMessage(),
+                previous: $e,
             );
         }
 
