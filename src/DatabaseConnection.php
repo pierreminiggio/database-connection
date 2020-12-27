@@ -53,6 +53,10 @@ class DatabaseConnection
      */
     public function query(string $query, array $parameters): array
     {
+        if (! isset($this->connection)) {
+            throw new QueryException('Please start the connection before querying data.');
+        }
+
         $statement = $this->connection->prepare($query);
 
         try {
@@ -72,6 +76,10 @@ class DatabaseConnection
      */
     public function exec(string $query, array $parameters): void
     {
+        if (! isset($this->connection)) {
+            throw new ExecuteException('Please start the connection before executing queries.');
+        }
+
         try {
             $statement = $this->connection->prepare($query);
         } catch (PDOException $e) {
