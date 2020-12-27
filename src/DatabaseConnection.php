@@ -12,6 +12,7 @@ class DatabaseConnection
 {
 
     const UTF_8 = 'utf8';
+    const UTF_8_MB_4 = 'utf8mb4';
 
     private ?PDO $connection;
 
